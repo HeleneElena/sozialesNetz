@@ -1,0 +1,27 @@
+.appWrapper {
+   width: 1400px;
+   margin: 0 auto; 
+}
+.wpapper {
+  display: flex;
+  margin-top: 20px;
+}
+.header {
+  background: #6045E2;
+}
+.nav {
+  display: flex;
+  background: #6045E2;
+  color: white;
+} 
+.content {
+  display: flex;
+}
+
+.appWrapperConntent {
+  display: flex;
+  background-color: white;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+

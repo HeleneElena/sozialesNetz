@@ -1,0 +1,27 @@
+.message {
+    margin-top: 50px;
+    color: #6045E2;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 17px;
+}
+.newpost {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.53);
+    min-width: 1026px;
+    min-height: 77px;
+    background: rgba(214, 214, 214, 0.2);
+    padding-left: 20px;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+.button {
+    background: #FFC619;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    border: none;
+    padding: 15px 68px;
+    margin-top: 26px;
+    margin-left: 884px;
+    margin-bottom: 40px;
+}

@@ -1,0 +1,11 @@
+.window {
+    width: 500px;
+    height: 77px;
+    background-color: rgba(196, 196, 196, 0.2);
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    margin-left: 70px;
+    margin-top: 20px;
+}

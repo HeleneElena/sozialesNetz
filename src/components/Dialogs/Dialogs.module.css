@@ -1,0 +1,22 @@
+.wrapper {
+    display: flex;
+}
+.people {
+    height: 922px;
+    width: 295px;
+    background-color: rgba(196, 196, 196, 0.2);
+    margin-left: 20px;
+    margin-right: 96px;
+} 
+.title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: #6045E2;
+    margin-left: 59px;
+    margin-top: 21px;
+    margin-bottom: 34px;
+}
+.communication {
+    position: absolute;
+}

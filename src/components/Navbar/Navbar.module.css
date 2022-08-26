@@ -1,0 +1,21 @@
+.navbar {
+    background: #6045E2;
+    min-width: 200px;
+    min-height: 900px;
+    padding: 2%;
+    
+}
+.nav {
+    margin-bottom: 10px;
+}
+.link {
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+}
+.link:hover {
+    color: burlywood;
+}

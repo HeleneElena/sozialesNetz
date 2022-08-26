@@ -1,0 +1,34 @@
+.banner {
+    width: 1050px;
+    height: 150px;
+    background: #FF769A;
+}
+.user {
+    display: flex;
+    margin-top: 20px;
+}
+.foto {
+    width: 180px;
+    height: 180px;
+    background: #FFC619;
+}
+.name {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+.vorname {
+    color: #6045E2;
+    font-weight: bold;
+    font-size: 25px;
+}
+.datei {
+    font-size: 15px;
+    margin-top: 15px;
+    line-height: 16px;
+}
+.dateiplus {
+    color: #171717;
+    margin-bottom: 10px;
+}
