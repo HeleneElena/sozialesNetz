@@ -4,7 +4,7 @@ import s from './ProfileInfo.module.css';
 const ProfileInfo = (props) => {
   return (
     <div>
-      <div className={s.banner}>Banner</div>
+      <div className={s.banner}> </div>
       <div className={s.user}>
         <div className={s.foto}>Foto</div>
         <div className={s.name}> 

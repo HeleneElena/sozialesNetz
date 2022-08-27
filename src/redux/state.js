@@ -14,6 +14,7 @@ let state = {
                 {id: 4, name: 'Helene'},
                 {id: 5, name: 'Boss'}
         ],
+        newPostText: '',
     },
     dialogsPage: {
         messages: [
@@ -26,15 +27,20 @@ let state = {
     },
     sidebar: {},
 };
-    
-export const addPost = (postMessage) => {
+
+export const addPost = () => {
     let newPost = {
         id: 5, 
-        message: postMessage, 
+        message: state.profilePage.newPostText, 
         likesCount: 0
     };
-    
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = '';
+    rerenderTree(state);
+};
+
+export const updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
     rerenderTree(state);
 };
 
