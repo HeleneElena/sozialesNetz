@@ -1,17 +1,9 @@
-.banner {
-    width: 1050px;
-    height: 150px;
-    background: #FF769A;
-}
+
 .user {
     display: flex;
-    margin-top: 20px;
+    margin-top: 30px;
 }
-.foto {
-    width: 180px;
-    height: 180px;
-    background: #FFC619;
-}
+
 .name {
     font-size: 20px;
     margin-top: 10px;

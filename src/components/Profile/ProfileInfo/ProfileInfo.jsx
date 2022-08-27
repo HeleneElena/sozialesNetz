@@ -1,12 +1,18 @@
 import React from 'react';
 import s from './ProfileInfo.module.css';
+import bannerFoto from '../../../image/banner.jpg';
+import ich from '../../../image/ich.jpg';
 
 const ProfileInfo = (props) => {
   return (
     <div>
-      <div className={s.banner}> </div>
+      <div className={s.banner}>
+        <img src={bannerFoto} />
+      </div>
       <div className={s.user}>
-        <div className={s.foto}>Foto</div>
+        <div className={s.foto}>
+          <img src={ich} />
+        </div>
         <div className={s.name}> 
           <div className={s.vorname}>Helene</div>
           <div className={s.datei}>

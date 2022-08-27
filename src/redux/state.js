@@ -1,12 +1,11 @@
-import { rerenderTree } from "../render";
-
-let state = {
-    profilePage: {
-        posts: [
-            {id: 1, message: 'Hi, why nobody love me?', likesCount: 12},
-            {id: 2, message: 'What is happening in the world today?', likesCount: 85},
-            {id: 3, message: 'I study English every day', likesCount: 69},
-        ],
+let store = {
+    _state: {
+        profilePage: {
+            posts: [
+                {id: 1, message: 'Hi, why nobody love me?', likesCount: 12},
+                {id: 2, message: 'What is happening in the world today?', likesCount: 85},
+                {id: 3, message: 'I study English every day', likesCount: 69},
+            ],
         dialogs: [
                 {id: 1, name: 'Artur'},
                 {id: 2, name: 'Michi'},
@@ -25,23 +24,28 @@ let state = {
             {id: 5, message: 'Hello, zusammen'}        
         ], 
     },
-    sidebar: {},
+    sidebar: {}, },
+    getState() {
+        return this._state;
+    },
+    _callSubscriber() {},
+    addPost() {
+        let newPost = {
+            id: 5, 
+            message: this._state.profilePage.newPostText, 
+            likesCount: 0
+        };
+        this._state.profilePage.posts.push(newPost);
+        this._state.profilePage.newPostText = '';
+        this._callSubscriber(this._state);
+    },
+    updateNewPostText(newText) {
+        this._state.profilePage.newPostText = newText;
+        this._callSubscriber(this._state);
+    },
+    subscribe(observer) {
+        this._callSubscriber = observer;
+    },
 };
-
-export const addPost = () => {
-    let newPost = {
-        id: 5, 
-        message: state.profilePage.newPostText, 
-        likesCount: 0
-    };
-    state.profilePage.posts.push(newPost);
-    state.profilePage.newPostText = '';
-    rerenderTree(state);
-};
-
-export const updateNewPostText = (newText) => {
-    state.profilePage.newPostText = newText;
-    rerenderTree(state);
-};
-
-export default state;
+export default store;
+window.store = store; 
