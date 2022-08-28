@@ -3,13 +3,13 @@ import Mypost from './Mypost/Mypost';
 import s from './Profile.module.css';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 
-const Profile = ({posts, addPost, updateNewPostText}) => {
+const Profile = ({posts, dispatch}) => {
 
     return (
         <div> 
             <div className={s.message}>
               <ProfileInfo />
-              <Mypost posts={posts} addPost={addPost} updateNewPostText={updateNewPostText} />
+              <Mypost posts={posts} dispatch={dispatch} />
             </div>
          </div>
     )
