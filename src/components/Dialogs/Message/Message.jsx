@@ -10,7 +10,7 @@ const Message = (props) => {
     }
 
     return (
-         <div className={s.window}>{props.message}</div>
+        <div className={s.window}>{props.message}</div>
     )
 }
 

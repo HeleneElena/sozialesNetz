@@ -9,20 +9,24 @@ const Dialogs = ({dialogs, messages}) => {
     let messagesElements = messages.messages.map( (m, id) => <Message key={id} message={m.message} /> );
     let personsElements = dialogs.dialogs.map( (d, id) =>  <Person key={id} name={d.name} /> );
 
-    return (
+    return (<> 
         <div className={s.wrapper}>
-            <div className={s.people}>
-                <h2 className={s.title}>DIALOGS </h2>
-                { dialogsElements }
+                <div className={s.people}>
+                    <h2 className={s.title}>DIALOGS </h2>
+                    { dialogsElements }
+                </div>
+                <div> 
+                <div className={s.communication}> 
+                    { personsElements }
+                </div>
+                        { messagesElements }
+                </div>
             </div>
-            <div> 
-            <div className={s.communication}> 
-                  { personsElements }
+            <div className={s.newDialog} > 
+                <textarea placeholder="dein Post..." />
+                <button className={s.button}>Send </button>
             </div>
-                    { messagesElements }
-            </div>
-            
-        </div>
+        </>
     )
 }
 

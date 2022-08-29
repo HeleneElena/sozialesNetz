@@ -3,10 +3,10 @@
 }
 .people {
     height: 922px;
-    width: 295px;
+    width: 240px;
     background-color: rgba(196, 196, 196, 0.2);
     margin-left: 20px;
-    margin-right: 96px;
+    margin-right: 50px;
 } 
 .title {
     font-weight: bold;
@@ -19,4 +19,9 @@
 }
 .communication {
     position: absolute;
+}
+.newDialog {
+    margin-left: 20px;
+    width: 200px;
+    display: inline;
 }
