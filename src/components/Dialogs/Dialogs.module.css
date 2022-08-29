@@ -21,7 +21,16 @@
     position: absolute;
 }
 .newDialog {
+    width: 500px;
     margin-left: 20px;
-    width: 200px;
-    display: inline;
+    height: 95px;
+    margin-top: 50px;
+}
+.btnDialog {
+    padding: 2% 4%;
+    margin-left: 455px;
+    border: none;
+    color: #fff;
+    background-color: #6045E2;
+    margin-top: 10px;
 }

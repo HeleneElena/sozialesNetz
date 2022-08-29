@@ -8,7 +8,8 @@ import App from './App';
 let rerenderTree = () => {
     ReactDOM.render(
         <App dispatch={store.dispatch.bind(store)} 
-             state={store.getState()} />,
+             state={store.getState()}
+             store={store} />,
       document.getElementById('root')
     );
 };
