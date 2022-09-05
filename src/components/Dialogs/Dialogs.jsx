@@ -3,21 +3,23 @@ import s from './Dialogs.module.css';
 import DialogItem from './DialogItem/DialogItem';
 import Person from './Person/Person';
 import Message from './Message/Message';
-import { sendMessageCreator, updateNewMessageCreator } from './../../redux/state';
+import { sendMessageCreator } from '../../redux/dialogs-reducer';
+import { updateNewMessageCreator } from '../../redux/dialogs-reducer';
 
-const Dialogs = ({dialogs, messages, dispatch}) => {
+
+const Dialogs = ({dialogs, messages, store}) => {
     let dialogsElements = dialogs.dialogs.map( d => <DialogItem name={d.name} id={d.id} /> ); 
     let messagesElements = messages.messages.map( (m, id) => <Message key={id} message={m.message} /> );
     let personsElements = dialogs.dialogs.map( (d, id) =>  <Person key={id} name={d.name} /> );
     let newMessageBody = messages.newMessageBody;
 
 let onSendMessageClick = () => {
-    dispatch(sendMessageCreator());
+    store.dispatch(sendMessageCreator());
 };
 
 let onNewMessageChange = (e) => {
     let body = e.target.value;
-    dispatch(updateNewMessageCreator());
+    store.dispatch(updateNewMessageCreator(body));
 };
 
     return (<> 
@@ -36,7 +38,8 @@ let onNewMessageChange = (e) => {
                                         className={s.newDialog} 
                                         placeholder="dein Post..." 
                                         onChange={onNewMessageChange} /></div>
-                        <div><button onClick={onSendMessageClick} className={s.btnDialog}>Send </button></div>
+                        <div><button onClick={onSendMessageClick} 
+                                     className={s.btnDialog}>Send </button></div>
                     </div>
                 </div>
             </div>

@@ -15,9 +15,13 @@ const App = ({state, dispatch, store}) => {
           <Navbar />
             <Routes>
               <Route path="/profile"  
-                     element={<Profile posts={state.profilePage} dispatch={dispatch} />} /> 
+                     element={<Profile posts={state.profilePage} 
+                     dispatch={dispatch} />} /> 
               <Route path="/dialogs" 
-                     element={<Dialogs dialogs={state.profilePage} store={store} messages={state.dialogsPage} />} />
+                     element={<Dialogs 
+                      dialogs={state.profilePage} 
+                     store={store} 
+                     messages={state.dialogsPage} />} />
             </Routes>
         </div>
       </div>
